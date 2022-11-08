@@ -17,8 +17,6 @@ bundle install
 rake db:create db:migrate db:seed
 ```
 
-Check seeds for the user
-
 ## 2. <a name='Runappication'></a> Setup an oauth appication
 
 ```
