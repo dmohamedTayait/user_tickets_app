@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <p><%= I18n.t 'mailer.shared.welcome', user_name: @user.name %></p>
+  <br>
+  <p><%= I18n.t 'mailer.tickets.notification_mailer.send_reminder.paragraph', ticket_title: @ticket.title, due_date: @ticket.due_date %></p>
+  <br>
+  <p><%=raw I18n.t 'mailer.shared.ticket_preview_link', ticket_url: @ticket_url %></p>
+  <br>
+  <p><%= I18n.t 'mailer.shared.best_regards' %></p>
+  <br>
+  <br>
+</html>

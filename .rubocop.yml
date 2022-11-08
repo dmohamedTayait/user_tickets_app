@@ -1,0 +1,56 @@
+# See all options in these files:
+  # https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+  # https://github.com/bbatsov/rubocop/blob/master/config/enabled.yml
+  # https://github.com/bbatsov/rubocop/blob/master/config/disabled.yml
+
+# run bundle exec rubocop -D to see what cop is reporting
+
+# If you want to skip the check for line length in a specific case do:
+# rubocop:disable LineLength
+# superlong-line-with-unavoidable-excesive-length
+# rubocop:enable LineLength
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+Rails:
+  Enabled: true
+
+AllCops:
+  EnabledByDefault: false
+  TargetRubyVersion: 2.7
+  Exclude:
+    - db/schema.rb
+    - db/migrate/*
+    - bin/*
+    - node_modules/**/*
+    - vendor/**/*
+    - test/**/*
+    - spec/**/*
+    - config/**/*
+    - tmp/**/*
+    - config/deploy.rb
+    - config/deploy/*.rb
+    - config/routes.rb
+    - app/helpers/*
+    - lib/tasks/*
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/AbcSize:
+  Max: 20
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Although casecmp is more performant, downcase is more readable
+# 'Foo'.downcase.eql?('foo') vs 'Foo'.casecmp('foo').zero?
+Performance/Casecmp:
+  Enabled: false

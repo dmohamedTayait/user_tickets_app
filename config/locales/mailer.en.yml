@@ -1,0 +1,11 @@
+en:
+  mailer:
+    shared:
+      welcome: 'Hi %{user_name},'
+      ticket_preview_link: 'Here you can acess the <a href="%{ticket_url}">ticket</a> .'
+      best_regards: Best Regards
+    tickets:
+      notification_mailer:
+        send_reminder:
+          subject: 'Reminder about Ticket (%{ticket_title})'
+          paragraph: 'New Ticket (%{ticket_title}) has been assigned to you, due date is %{due_date}.'
