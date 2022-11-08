@@ -39,5 +39,5 @@ Ticket.create(
 ```
 
 -- You will find in the console 
-1- New Ticket is created
-2- Notification job runs to setup the email at the requested time.
+- 1. New Ticket is created
+- 2. Notification job runs to setup the email at the requested time.
