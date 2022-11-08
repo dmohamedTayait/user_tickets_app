@@ -10,26 +10,34 @@
 ## 1. <a name='LocalInstallation'></a> Local Installation
 
 ```
--- Fill the needed values at the .env.example, then run the following commands:
+-- Fill copy .env.example and name it .env ... fille the keys with the needed values.
 
 cp .env.example .env
 bundle install
 rake db:create db:migrate db:seed
 ```
 
-## 2. <a name='Runappication'></a> Setup an oauth appication
+## 2. <a name='Runappication'></a> To Run the application
+
+-- Just Open the rails console
 
 ```
-rails s
-```
-
-and visit
+rails console
 
 ```
-localhost:3000/oauth/applications
+-- then run the following query:
+
+```
+Ticket.create(
+  title: Faker::Lorem.word,
+  description: Faker::Lorem.sentences,
+  due_date: Time.zone.today + 5.days,
+  user: User.first,
+  status: 1,
+  progress: 0
+)
 ```
 
-with a user, that has the admin flag to true
-
-Copy the application secret and uid to your client according to the documentation there
-
+-- You will find in the console 
+1- New Ticket is created
+2- Notification job runs to setup the email at the requested time.
