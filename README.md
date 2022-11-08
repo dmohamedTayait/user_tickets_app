@@ -1,4 +1,4 @@
-# SMART-SSO Readme
+# Tickets Readme
 
 <!-- vscode-markdown-toc -->
 
@@ -18,8 +18,6 @@ rake db:create db:migrate db:seed
 ```
 
 Check seeds for the user
-
-# Setting up the Portal client for development
 
 ## 2. <a name='Runappication'></a> Setup an oauth appication
 
