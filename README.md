@@ -10,7 +10,7 @@
 ## 1. <a name='LocalInstallation'></a> Local Installation
 
 ```
--- Fill copy .env.example and name it .env ... fille the keys with the needed values.
+-- Fill copy .env.example and name it .env ... fill the keys with the needed values.
 
 cp .env.example .env
 bundle install
